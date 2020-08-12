@@ -5,7 +5,7 @@ const useDarkMode = (key, initialValue) => {
     const [storedValue, setValue] = useLocalStorage(key, initialValue);
 
     useEffect(() => {
-        const pageStyler = document.getElementsByName("html");
+        const pageStyler = document.querySelector("body");
 
             if (storedValue) {
                 pageStyler.classList.add("dark-mode");
